@@ -1,5 +1,8 @@
 # Maximizer
 
+[![juliverse](https://circleci.com/gh/juliverse/maximizer.svg?style=svg)](https://app.circleci.com/pipelines/github/juliverse/maximizer)
+
+
 A webservice that turns lowercase strings into uppercase strings.
 
 ## How to setup
