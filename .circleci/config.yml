@@ -18,11 +18,15 @@ jobs:
             conda init bash
             source /root/.bashrc
             conda env create -f conda_environment_docker.yml
-            conda activate maximizer
       - python/save-cache
       - run:
-          command: pytest
           name: Test
+          shell: /bin/bash
+          command: |
+            conda init bash
+            source /root/.bashrc
+            conda activate maximizer
+            pytest
 
 workflows:
   main:
