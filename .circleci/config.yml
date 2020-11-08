@@ -5,19 +5,14 @@ orbs:
 
 jobs:
   build-and-test:
-    docker:
-      - image: continuumio/miniconda3
-    working_directory: ~/repo
+    executor: python/default
     steps:
       - checkout
       - python/load-cache
-      - run:
-          name: install dependencies
-          command: |
-            conda env create -f environment.yml
+      - python/install-deps
       - python/save-cache
       - run:
-          command: pytest
+          command: ./manage.py test
           name: Test
 
 workflows:
