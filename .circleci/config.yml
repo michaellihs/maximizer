@@ -13,6 +13,7 @@ jobs:
       - python/load-cache
       - run:
           name: install dependencies
+          shell: /bin/bash
           command: |
             conda env create -f conda_environment_docker.yml
             conda activate maximizer
