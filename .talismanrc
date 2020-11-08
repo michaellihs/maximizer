@@ -1,0 +1,5 @@
+fileignoreconfig:
+- filename: conda_environment.yml
+  checksum: 481c9216cafee2d0f2d571020256f13239558e59ea0644e661348dcea70fda96
+- filename: README.md
+  checksum: 0613dc5a78230178729dcd4a2ad31c0115056de8b0a86cca3ff89e9c2b72fb95
