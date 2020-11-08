@@ -15,10 +15,7 @@ jobs:
           name: install dependencies
           shell: /bin/bash
           command: |
-            /bin/bash
-            conda init bash
-            conda env create -f conda_environment_docker.yml
-            conda activate maximizer
+            /bin/bash -c 'conda init bash; conda env create -f conda_environment_docker.yml; conda activate maximizer'
       - python/save-cache
       - run:
           command: pytest
