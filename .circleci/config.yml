@@ -10,7 +10,6 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - python/load-cache
       - run:
           name: install dependencies
           shell: /bin/bash
@@ -18,7 +17,6 @@ jobs:
             conda init bash
             source /root/.bashrc
             conda env create -f conda_environment_docker.yml
-      - python/save-cache
       - run:
           name: Test
           shell: /bin/bash
